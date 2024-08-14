@@ -23,7 +23,7 @@ const TextBlock = styled.div`
 
 const AboutImage = styled.img`
   width: 350px;
-  margin: 20px 20px;
+  margin: 20px;
   border-radius: 15px;
 `;
 

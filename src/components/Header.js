@@ -30,7 +30,7 @@ const NavLinks = styled.nav`
 `;
 
 const Logo = styled.div`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #f9f9f9;
 `;
