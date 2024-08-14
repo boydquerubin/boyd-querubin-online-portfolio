@@ -7,107 +7,80 @@ const ContactContainer = styled.section`
   text-align: center;
 `;
 
-const ContactTitle = styled.h2`
+const SectionTitle = styled.h2`
   font-size: 2rem;
   color: #333;
 `;
 
-const ContactForm = styled.form`
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+const TextBlock = styled.div`
+  font-size: 1.25rem;
+  color: #333;
+  margin: 1rem auto; /* Centers the text block within the parent container */
+  line-height: 1.6;
+  text-align: left; /* Aligns text within the block to the left */
+  max-width: 750px;
 `;
 
-const InputField = styled.input`
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+const AboutImage = styled.img`
+  width: 350px;
+  margin: 20px 20px;
+  border-radius: 15px;
 `;
 
-const TextAreaField = styled.textarea`
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  resize: none;
-  height: 150px;
-`;
-
-const SubmitButton = styled.button`
-  padding: 0.75rem 2rem;
-  background-color: #2e3a45;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    background-color: #666;
-    transform: scale(1.05);
-  }
+const ContactText = styled.p`
+  font-size: 1.25rem;
+  color: #666;
+  margin-top: 1rem;
+  line-height: 1.6;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Contact = () => {
-  const sendEmail = async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-      if (result.success) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send message.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the message.");
-    }
-
-    e.target.reset();
-  };
-
   return (
     <ContactContainer>
-      <ContactTitle>Contact Me</ContactTitle>
-      <ContactForm onSubmit={sendEmail}>
-        <InputField type="text" name="name" placeholder="Your Name" required />
-        <InputField
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        />
-        <TextAreaField name="message" placeholder="Your Message" required />
-        <SubmitButton type="submit">Send Message</SubmitButton>
-      </ContactForm>
+      <SectionTitle>My Story</SectionTitle>
+      <TextBlock>
+        <p>
+          I began my professional journey with a Bachelor's Degree in
+          Communications, working as a Marketer and Content Creator since early
+          2020. Now, as a software engineer, I’m passionate about building
+          clean, efficient web applications. With expertise in modern
+          technologies like React, Node.js, and more, I strive to create
+          solutions that simplify and improve people’s lives.
+        </p>
+        <p>
+          Passionate about technology and innovation, I am currently
+          transitioning to a career in software engineering and web development.
+          Driven by a love for coding and design, I am actively developing an
+          online portfolio to showcase my growing skills in these fields.
+        </p>
+        <p>
+          Outside of my professional interests, I'm a devoted husband and father
+          of three wonderful children. I enjoy volleyball, exploring new coding
+          challenges, and cherishing moments with my family.
+        </p>
+      </TextBlock>
+      <AboutImage
+        id="maddyBoyd"
+        src="/assets/MaddyBoyd.png"
+        alt="Image of Boyd and Maddy"
+      />
+      <AboutImage
+        id="QChildren"
+        src="/assets/QChildren.png"
+        alt="Image of Boyd's children"
+      />
+
+      <SectionTitle>Get Connected</SectionTitle>
+      <ContactText>
+        If you'd like to get in touch, feel free to send me an email at:
+        <br />
+        <strong>boydisaacq@gmail.com</strong>
+        <br />
+        I'll get back to you as soon as possible!
+      </ContactText>
     </ContactContainer>
   );
 };

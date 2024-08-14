@@ -4,13 +4,14 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
   padding: 2rem 1rem;
-  background-color: #f4e1d2;
+  background-color: #e4f0d0;
 `;
 
 const ProjectsTitle = styled.h2`
   font-size: 2rem;
-  color: #333;
+  color: #2e3a45;
   text-align: center;
+  // text-shadow: 1px 1px 2px grey;
 `;
 
 const ProjectList = styled.div`
@@ -24,7 +25,7 @@ const ProjectList = styled.div`
 const ProjectCard = styled.div`
   width: 300px;
   padding: 1rem;
-  background-color: #cccccc;
+  background-color: #f4f4f4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import About from "./components/About";
+// import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -26,7 +26,7 @@ const App = () => {
         <Content>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Content>

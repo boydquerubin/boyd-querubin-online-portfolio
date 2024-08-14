@@ -20,7 +20,7 @@ const HeroSection = styled.section`
 const ProjectsSection = styled.section`
   width: 100%;
   padding: 2rem 1rem;
-  background-color: #f4e1d2;
+  background-color: #e4f0d0;
 `;
 
 const Home = () => {
