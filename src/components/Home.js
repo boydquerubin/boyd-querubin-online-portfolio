@@ -14,13 +14,13 @@ const HeroSection = styled.section`
   width: 100%;
   padding: 2rem 1rem;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
 `;
 
 const ProjectsSection = styled.section`
   width: 100%;
   padding: 2rem 1rem;
-  background-color: #fff;
+  background-color: #f4e1d2;
 `;
 
 const Home = () => {

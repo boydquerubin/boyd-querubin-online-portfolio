@@ -1,10 +1,10 @@
-// src/components/Contact.js
 import React from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
 
 const ContactContainer = styled.section`
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: #f4f4f4;
   text-align: center;
 `;
 
@@ -43,26 +43,56 @@ const TextAreaField = styled.textarea`
 
 const SubmitButton = styled.button`
   padding: 0.75rem 2rem;
-  background-color: #007bff;
+  background-color: #2e3a45;
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #666;
+    transform: scale(1.05);
   }
 `;
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "your_service_id", // Replace with your EmailJS service ID
+        "your_template_id", // Replace with your EmailJS template ID
+        e.target,
+        "your_user_id" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Failed to send the message, please try again.");
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <ContactContainer>
       <ContactTitle>Contact Me</ContactTitle>
-      <ContactForm>
-        <InputField type="text" placeholder="Your Name" required />
-        <InputField type="email" placeholder="Your Email" required />
-        <TextAreaField placeholder="Your Message" required />
+      <ContactForm onSubmit={sendEmail}>
+        <InputField type="text" name="name" placeholder="Your Name" required />
+        <InputField
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+        <TextAreaField name="message" placeholder="Your Message" required />
         <SubmitButton type="submit">Send Message</SubmitButton>
       </ContactForm>
     </ContactContainer>

@@ -8,7 +8,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: #2e3a45;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
@@ -18,11 +18,13 @@ const NavLinks = styled.nav`
 
   a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: #f9f9f9;
+    font-weight: bold;
 
     &:hover {
-      color: #007bff;
+      color: #cccccc;
+      transform: scale(1.05);
+      transition: transform 0.2s;
     }
   }
 `;
@@ -30,7 +32,7 @@ const NavLinks = styled.nav`
 const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: #f9f9f9;
 `;
 
 const Header = () => {
@@ -40,7 +42,7 @@ const Header = () => {
       <NavLinks>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
+        {/* <Link to="/projects">Projects</Link> */}
         <Link to="/contact">Contact</Link>
       </NavLinks>
     </HeaderContainer>

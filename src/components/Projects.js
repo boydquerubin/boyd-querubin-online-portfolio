@@ -3,8 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
-  padding: 4rem 2rem;
-  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  background-color: #f4e1d2;
 `;
 
 const ProjectsTitle = styled.h2`
@@ -24,7 +24,7 @@ const ProjectList = styled.div`
 const ProjectCard = styled.div`
   width: 300px;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #cccccc;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
@@ -40,21 +40,23 @@ const ProjectImage = styled.img`
 const ProjectTitle = styled.h3`
   font-size: 1.5rem;
   color: #333;
-  margin-top: 1rem;
 `;
 
 const ProjectLink = styled.a`
   display: block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
+  background-color: #2e3a45;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #666;
+    transform: scale(1.05);
   }
 `;
 
