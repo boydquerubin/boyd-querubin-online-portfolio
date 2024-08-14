@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import emailjs from "emailjs-com";
 
 const ContactContainer = styled.section`
   padding: 4rem 2rem;
@@ -59,24 +58,37 @@ const SubmitButton = styled.button`
 `;
 
 const Contact = () => {
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
-        e.target,
-        "your_user_id" // Replace with your EmailJS user ID
-      )
-      .then(
-        (result) => {
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          alert("Failed to send the message, please try again.");
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const response = await fetch(
+        "https://your-backend-domain.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         }
       );
+
+      const result = await response.json();
+      if (result.success) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while sending the message.");
+    }
 
     e.target.reset();
   };

@@ -7,7 +7,12 @@ const cors = require("cors");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://boyd-querubin-online-portfolio.vercel.app", // Allow requests from your Vercel app
+  })
+);
+
 app.use(bodyParser.json());
 
 // API endpoint for contact form submissions
