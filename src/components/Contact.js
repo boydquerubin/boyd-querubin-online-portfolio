@@ -68,16 +68,13 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch(
-        "https://your-backend-domain.com/api/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("../pages/api/contact.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
       if (result.success) {
