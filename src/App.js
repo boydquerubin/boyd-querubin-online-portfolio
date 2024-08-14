@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 // import About from "./components/About";
 import Contact from "./components/Contact";
+import ContentHighlights from "./components/ContentHighlights";
 import Footer from "./components/Footer";
 
 const AppContainer = styled.div`
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             {/* <Route path="/about" element={<About />} /> */}
             <Route path="/contact" element={<Contact />} />
+            <Route path="/multimedia" element={<ContentHighlights />} />
           </Routes>
         </Content>
         <Footer />
