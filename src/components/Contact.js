@@ -64,12 +64,12 @@ const Contact = () => {
       </TextBlock>
       <AboutImage
         id="maddyBoyd"
-        src="/assets/MaddyBoyd.png"
+        src="/assets/MaddyBoyd.jpg"
         alt="Image of Boyd and Maddy"
       />
       <AboutImage
         id="QChildren"
-        src="/assets/QChildren.png"
+        src="/assets/QChildren.jpg"
         alt="Image of Boyd's children"
       />
 
