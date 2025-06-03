@@ -67,7 +67,7 @@ const Projects = () => {
       <ProjectList>
         <ProjectCard>
           <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
-          <ProjectTitle>Rubyx Qube Trivia App</ProjectTitle>
+          <ProjectTitle>Rubyx Qube - Trivia Game App</ProjectTitle>
           <ProjectLink href="https://rubyxqube.com/" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -80,7 +80,7 @@ const Projects = () => {
         </ProjectCard>
         <ProjectCard>
           <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
-          <ProjectTitle>BudBudget Savings App</ProjectTitle>
+          <ProjectTitle>BudBudget - Savings App</ProjectTitle>
           <ProjectLink href="https://budbudget.netlify.app/" target="_blank">
             Deployed Site
           </ProjectLink>
