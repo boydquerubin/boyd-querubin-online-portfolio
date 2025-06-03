@@ -1,4 +1,3 @@
-// src/components/Home.js
 import React from "react";
 import styled from "styled-components";
 import Hero from "./Hero";

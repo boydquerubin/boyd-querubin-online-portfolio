@@ -1,4 +1,3 @@
-// src/components/Projects.js
 import React from "react";
 import styled from "styled-components";
 
@@ -66,9 +65,8 @@ const Projects = () => {
     <ProjectsContainer>
       <ProjectsTitle>My Projects</ProjectsTitle>
       <ProjectList>
-        {/* Example Project Card */}
         <ProjectCard>
-          <ProjectImage src="/assets/rubyxqube.png" alt="Project Name" />
+          <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
           <ProjectTitle>Rubyx Qube</ProjectTitle>
           <ProjectLink href="https://rubyxqube.com/" target="_blank">
             Deployed Site
@@ -81,13 +79,39 @@ const Projects = () => {
           </ProjectLink>
         </ProjectCard>
         <ProjectCard>
-          <ProjectImage src="/assets/budbudget.png" alt="Project Name" />
+          <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
           <ProjectTitle>BudBudget</ProjectTitle>
           <ProjectLink href="https://budbudget.netlify.app/" target="_blank">
             Deployed Site
           </ProjectLink>
           <ProjectLink
             href="https://github.com/boydquerubin/devmountain-capstone-project"
+            target="_blank"
+          >
+            View file on GitHub
+          </ProjectLink>
+        </ProjectCard>
+        <ProjectCard>
+          <ProjectImage src="/assets/filipino.webp" alt="A Taste of Filipino Home" />
+          <ProjectTitle>A Taste of Filipino Home</ProjectTitle>
+          <ProjectLink href="https://boydquerubin.github.io/wdd131/project/index.html" target="_blank">
+            Deployed Site
+          </ProjectLink>
+          <ProjectLink
+            href="https://github.com/boydquerubin/wdd131/tree/main/project"
+            target="_blank"
+          >
+            View file on GitHub
+          </ProjectLink>
+        </ProjectCard>
+        <ProjectCard>
+          <ProjectImage src="/assets/chamber.webp" alt="Meridian Chamber of Commerce" />
+          <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
+          <ProjectLink href="https://boydquerubin.github.io/wdd231/chamber/index.html" target="_blank">
+            Deployed Site
+          </ProjectLink>
+          <ProjectLink
+            href="https://github.com/boydquerubin/wdd231/tree/main/chamber"
             target="_blank"
           >
             View file on GitHub
