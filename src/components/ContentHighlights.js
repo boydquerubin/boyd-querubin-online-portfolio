@@ -55,11 +55,14 @@ const StyledReactPlayer = styled(ReactPlayer)`
 `;
 
 const ContactText = styled.p`
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 600px;
-  margin: 2rem auto 0;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.6;
+  text-align: left;
 `;
 
 const ContentHighlights = () => {
