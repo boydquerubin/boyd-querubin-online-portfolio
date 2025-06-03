@@ -54,6 +54,14 @@ const StyledReactPlayer = styled(ReactPlayer)`
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 `;
 
+const ContactText = styled.p`
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  line-height: 1.6;
+`;
+
 const ContentHighlights = () => {
   const responsive = {
     superLargeDesktop: {
@@ -159,13 +167,15 @@ const ContentHighlights = () => {
       </CarouselContainer>
 
       <SectionTitle>Get Connected</SectionTitle>
-      <AboutText>
+      <ContactText>
         If you'd like to get in touch, feel free to send me an email at:
         <br />
-        <strong>boydisaacq@gmail.com</strong>
+        <strong>
+          <a href="mailto:boydisaacq@gmail.com">boydisaacq@gmail.com</a>
+        </strong>
         <br />
         I'll get back to you as soon as possible!
-      </AboutText>
+      </ContactText>
 
     </ContentContainer>
   );
