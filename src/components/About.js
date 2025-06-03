@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ContactContainer = styled.section`
+const AboutContainer = styled.section`
   padding: 4rem 2rem;
   background-color: #f4f4f4;
   text-align: center;
@@ -27,7 +27,7 @@ const AboutImage = styled.img`
   border-radius: 15px;
 `;
 
-const ContactText = styled.p`
+const AboutText = styled.p`
   font-size: 1.25rem;
   color: #666;
   margin-top: 1rem;
@@ -37,18 +37,13 @@ const ContactText = styled.p`
   margin-right: auto;
 `;
 
-const Contact = () => {
+const About = () => {
   return (
-    <ContactContainer>
+    <AboutContainer>
       <SectionTitle>My Story</SectionTitle>
       <TextBlock>
         <p>
-          I began my professional journey with a Bachelor's Degree in
-          Communications, working as a Marketer and Content Creator since early
-          2020. Now, as a software engineer, I’m passionate about building
-          clean, efficient web applications. With expertise in modern
-          technologies like React, Node.js, and more, I strive to create
-          solutions that simplify and improve people’s lives.
+          My career began with a Bachelor's Degree in Communications, and since early 2020, I’ve worked as a marketer and content creator. Over time, I transitioned into software engineering, where I discovered a real passion for building web applications. I enjoy working with modern tools and technologies like React and Python to develop practical applications for everyday use.
         </p>
         <p>
           Passionate about technology and innovation, I am currently
@@ -73,16 +68,16 @@ const Contact = () => {
         alt="Image of Boyd's children"
       />
 
-      <SectionTitle>Get Connected</SectionTitle>
-      <ContactText>
+      {/* <SectionTitle>Get Connected</SectionTitle>
+      <AboutText>
         If you'd like to get in touch, feel free to send me an email at:
         <br />
         <strong>boydisaacq@gmail.com</strong>
         <br />
         I'll get back to you as soon as possible!
-      </ContactText>
-    </ContactContainer>
+      </AboutText> */}
+    </AboutContainer>
   );
 };
 
-export default Contact;
+export default About;

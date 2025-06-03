@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   background-color: #2e3a45;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
@@ -40,7 +40,7 @@ const Header = () => {
       <Logo>Online Portfolio</Logo>
       <NavLinks>
         <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/about">About</Link>
         <Link to="/multimedia">Multimedia</Link>
       </NavLinks>
     </HeaderContainer>
