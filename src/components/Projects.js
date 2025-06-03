@@ -116,46 +116,7 @@ const Projects = () => {
           >
             View file on GitHub
           </ProjectLink>
-        </ProjectCard>
-        <ProjectCard>
-          <ProjectImage src="/assets/chamber.webp" alt="Meridian Chamber of Commerce" />
-          <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
-          <ProjectLink href="https://boydquerubin.github.io/wdd231/chamber/index.html" target="_blank">
-            Deployed Site
-          </ProjectLink>
-          <ProjectLink
-            href="https://github.com/boydquerubin/wdd231/tree/main/chamber"
-            target="_blank"
-          >
-            View file on GitHub
-          </ProjectLink>
-        </ProjectCard>
-        <ProjectCard>
-          <ProjectImage src="/assets/chamber.webp" alt="Meridian Chamber of Commerce" />
-          <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
-          <ProjectLink href="https://boydquerubin.github.io/wdd231/chamber/index.html" target="_blank">
-            Deployed Site
-          </ProjectLink>
-          <ProjectLink
-            href="https://github.com/boydquerubin/wdd231/tree/main/chamber"
-            target="_blank"
-          >
-            View file on GitHub
-          </ProjectLink>
-        </ProjectCard>
-        <ProjectCard>
-          <ProjectImage src="/assets/chamber.webp" alt="Meridian Chamber of Commerce" />
-          <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
-          <ProjectLink href="https://boydquerubin.github.io/wdd231/chamber/index.html" target="_blank">
-            Deployed Site
-          </ProjectLink>
-          <ProjectLink
-            href="https://github.com/boydquerubin/wdd231/tree/main/chamber"
-            target="_blank"
-          >
-            View file on GitHub
-          </ProjectLink>
-        </ProjectCard>
+        </ProjectCard>        
       </ProjectList>
     </ProjectsContainer>
   );
