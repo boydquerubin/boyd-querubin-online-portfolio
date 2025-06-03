@@ -67,7 +67,7 @@ const Projects = () => {
       <ProjectList>
         <ProjectCard>
           <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
-          <ProjectTitle>Rubyx Qube</ProjectTitle>
+          <ProjectTitle>Rubyx Qube Trivia App</ProjectTitle>
           <ProjectLink href="https://rubyxqube.com/" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -80,7 +80,7 @@ const Projects = () => {
         </ProjectCard>
         <ProjectCard>
           <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
-          <ProjectTitle>BudBudget</ProjectTitle>
+          <ProjectTitle>BudBudget Savings App</ProjectTitle>
           <ProjectLink href="https://budbudget.netlify.app/" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -116,7 +116,20 @@ const Projects = () => {
           >
             View file on GitHub
           </ProjectLink>
-        </ProjectCard>        
+        </ProjectCard>
+        <ProjectCard>
+          <ProjectImage src="/assets/ecommerce.webp" alt="BRIQ-N-BRAQ Ecommerce Store" />
+          <ProjectTitle>Sample Ecommerce Store</ProjectTitle>
+          <ProjectLink href="https://boydquerubin.github.io/wdd231/project/index.html" target="_blank">
+            Deployed Site
+          </ProjectLink>
+          <ProjectLink
+            href="https://github.com/boydquerubin/wdd231/tree/main/project"
+            target="_blank"
+          >
+            View file on GitHub
+          </ProjectLink>
+        </ProjectCard>
       </ProjectList>
     </ProjectsContainer>
   );
