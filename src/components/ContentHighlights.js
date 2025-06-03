@@ -62,7 +62,7 @@ const ContactText = styled.p`
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
 `;
 
 const ContentHighlights = () => {
