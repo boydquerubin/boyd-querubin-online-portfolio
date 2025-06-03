@@ -57,7 +57,6 @@ const StyledReactPlayer = styled(ReactPlayer)`
 const ContactText = styled.p`
   font-size: 1.25rem;
   color: #555;
-  margin-bottom: 3rem;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
