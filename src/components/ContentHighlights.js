@@ -54,44 +54,6 @@ const StyledReactPlayer = styled(ReactPlayer)`
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const CallToAction = styled.div`
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const CTAHeading = styled.h3`
-  font-size: 1.75rem;
-  color: #222;
-  margin-bottom: 1rem;
-`;
-
-const CTADescription = styled.p`
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2rem;
-`;
-
-const CTAButton = styled.a`
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
-
 const ContentHighlights = () => {
   const responsive = {
     superLargeDesktop: {
@@ -196,17 +158,14 @@ const ContentHighlights = () => {
         </Carousel>
       </CarouselContainer>
 
-      <CallToAction>
-        <CTAHeading>Want to Collaborate or Learn More?</CTAHeading>
-        <CTADescription>
-          If you'd like to get in touch, feel free to send me an email at:
-          <br />
-          <strong>boydisaacq@gmail.com</strong>
-          <br />
-          I'd love to hear from you!
-        </CTADescription>
-        <CTAButton href="/contact">Get Connected</CTAButton>
-      </CallToAction>
+      <SectionTitle>Get Connected</SectionTitle>
+      <AboutText>
+        If you'd like to get in touch, feel free to send me an email at:
+        <br />
+        <strong>boydisaacq@gmail.com</strong>
+        <br />
+        I'll get back to you as soon as possible!
+      </AboutText>
 
     </ContentContainer>
   );
