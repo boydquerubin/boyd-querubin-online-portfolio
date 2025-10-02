@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -42,7 +42,6 @@ const VideoWrapper = styled.div`
 const PlayerWrapper = styled.div`
   position: relative;
   aspect-ratio: 16 / 9;
-  /* Fallback for old browsers */
   @supports not (aspect-ratio: 16 / 9) {
     padding-top: 56.25%;
   }
@@ -59,7 +58,6 @@ const StyledReactPlayer = styled(ReactPlayer)`
 const ReelWrapper = styled.div`
   position: relative;
   aspect-ratio: 9 / 16;
-  /* Fallback */
   @supports not (aspect-ratio: 9 / 16) {
     padding-top: 177.78%;
   }
@@ -76,36 +74,17 @@ const ReelFrame = styled.iframe`
   background: #000;
 `;
 
-/* Helper: detect IG reel & build embed URL */
+/* Converts "https://www.instagram.com/reel/XXXX/?hl=en" to embed URL */
 const toInstagramEmbed = (url) => {
-  // Accepts URLs like: https://www.instagram.com/reel/XXXX/?hl=en
   const match = url.match(/instagram\.com\/reel\/([A-Za-z0-9_\-]+)/i);
   if (!match) return null;
   const id = match[1];
   return `https://www.instagram.com/reel/${id}/embed`;
 };
 
-/* Embed component for reels */
-const ReelEmbed = ({ url, title = "Instagram Reel" }) => {
+const ReelEmbed = ({ url, title = "Reel" }) => {
   const embed = toInstagramEmbed(url);
-  if (!embed) {
-    // If you later use non-IG portrait MP4s, you can fall back to ReactPlayer here:
-    // return <StyledReactPlayer url={url} width="100%" height="100%" playsinline controls />;
-    return null;
-  }
-
-  // Ensure Instagram embed script upgrades the iframe (not strictly required for /embed)
-  useEffect(() => {
-    if (!document.getElementById("ig-embed-script")) {
-      const s = document.createElement("script");
-      s.async = true;
-      s.defer = true;
-      s.src = "https://www.instagram.com/embed.js";
-      s.id = "ig-embed-script";
-      document.body.appendChild(s);
-    }
-  }, []);
-
+  if (!embed) return null;
   return (
     <ReelWrapper>
       <ReelFrame
@@ -135,9 +114,35 @@ const ContentHighlights = () => {
   const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
     desktop:           { breakpoint: { max: 3000, min: 1024 }, items: 2 },
-    tablet:            { breakpoint: { max: 1024, min: 464 }, items: 2 },
-    mobile:            { breakpoint: { max: 464,  min: 0 },   items: 1 },
+    tablet:            { breakpoint: { max: 1024, min: 464 },  items: 2 },
+    mobile:            { breakpoint: { max: 464,  min: 0 },    items: 1 },
   };
+
+  const youtubeVideos = [
+    "https://www.youtube.com/watch?v=OLrvD-Jz1oQ",
+    "https://www.youtube.com/watch?v=Y1TGu4yvEJg&t=6s",
+    "https://www.youtube.com/watch?v=Co3Jlu0ymg0",
+    "https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s",
+    "https://www.youtube.com/watch?v=-6f-Q4brhpY",
+    "https://www.youtube.com/watch?v=0ODeIGjOpnA",
+    "https://www.youtube.com/watch?v=gRBfOb2PHgk",
+  ];
+
+  const reels3D = [
+    "https://www.instagram.com/reel/Cj-1nilJPdb/?hl=en",
+    "https://www.instagram.com/reel/CkQ0ytPpjce/?hl=en",
+    "https://www.instagram.com/reel/CoK4q-KLSXd/?hl=en",
+    "https://www.instagram.com/reel/ClZDKeTJ-Eu/?hl=en",
+    "https://www.instagram.com/reel/CjqikoivHjm/?hl=en",
+  ];
+
+  const reelsFeatured = [
+    "https://www.instagram.com/reel/C3bJqZGukqf/?hl=en",
+    "https://www.instagram.com/reel/C4gju2zuwEo/?hl=en",
+    "https://www.instagram.com/reel/C3_Lrkyymyf/?hl=en",
+    "https://www.instagram.com/reel/C2kiag-L8g1/?hl=en",
+    "https://www.instagram.com/reel/C4q2dhvSdr6/?hl=en",
+  ];
 
   return (
     <ContentContainer>
@@ -151,15 +156,7 @@ const ContentHighlights = () => {
       {/* Main Highlights Carousel (YouTube - landscape) */}
       <CarouselContainer>
         <Carousel responsive={responsive}>
-          {[
-            "https://www.youtube.com/watch?v=OLrvD-Jz1oQ",
-            "https://www.youtube.com/watch?v=Y1TGu4yvEJg&t=6s",
-            "https://www.youtube.com/watch?v=Co3Jlu0ymg0",
-            "https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s",
-            "https://www.youtube.com/watch?v=-6f-Q4brhpY",
-            "https://www.youtube.com/watch?v=0ODeIGjOpnA",
-            "https://www.youtube.com/watch?v=gRBfOb2PHgk",
-          ].map((url) => (
+          {youtubeVideos.map((url) => (
             <VideoWrapper key={url}>
               <PlayerWrapper>
                 <StyledReactPlayer url={url} width="100%" height="100%" controls />
@@ -173,13 +170,7 @@ const ContentHighlights = () => {
       <SectionTitle>3D Animation Reels</SectionTitle>
       <CarouselContainer>
         <Carousel responsive={responsive}>
-          {[
-            "https://www.instagram.com/reel/Cj-1nilJPdb/?hl=en",
-            "https://www.instagram.com/reel/CkQ0ytPpjce/?hl=en",
-            "https://www.instagram.com/reel/CoK4q-KLSXd/?hl=en",
-            "https://www.instagram.com/reel/ClZDKeTJ-Eu/?hl=en",
-            "https://www.instagram.com/reel/CjqikoivHjm/?hl=en",
-          ].map((url) => (
+          {reels3D.map((url) => (
             <VideoWrapper key={url}>
               <ReelEmbed url={url} title="3D Animation Reel" />
             </VideoWrapper>
@@ -191,13 +182,7 @@ const ContentHighlights = () => {
       <SectionTitle>Featured Reels</SectionTitle>
       <CarouselContainer>
         <Carousel responsive={responsive}>
-          {[
-            "https://www.instagram.com/reel/C3bJqZGukqf/?hl=en",
-            "https://www.instagram.com/reel/C4gju2zuwEo/?hl=en",
-            "https://www.instagram.com/reel/C3_Lrkyymyf/?hl=en",
-            "https://www.instagram.com/reel/C2kiag-L8g1/?hl=en",
-            "https://www.instagram.com/reel/C4q2dhvSdr6/?hl=en",
-          ].map((url) => (
+          {reelsFeatured.map((url) => (
             <VideoWrapper key={url}>
               <ReelEmbed url={url} title="Featured Reel" />
             </VideoWrapper>
