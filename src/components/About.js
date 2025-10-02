@@ -43,18 +43,13 @@ const About = () => {
       <SectionTitle>My Story</SectionTitle>
       <TextBlock>
         <p>
-          My career began with a Bachelor's Degree in Communications, and since early 2020, I’ve worked as a marketer and content creator. Over time, I transitioned into software engineering, where I discovered a real passion for building web applications. I enjoy working with modern tools and technologies like React and Python to develop practical applications for everyday use.
+          I started out with a Bachelor’s Degree in Communications and, since 2020, have worked as a marketer and content creator. Along the way, I discovered a passion for software development and began focusing on building web applications. I enjoy working with modern tools like React and Python.
         </p>
         <p>
-          Passionate about technology and innovation, I am currently
-          transitioning to a career in software engineering and web development.
-          Driven by a love for coding and design, I am actively developing an
-          online portfolio to showcase my growing skills in these fields.
+          Through my online portfolio, I showcase projects that highlight both my technical skills and creative experience.
         </p>
         <p>
-          Outside of my professional interests, I'm a devoted husband and father
-          of three wonderful children. I enjoy volleyball, exploring new coding
-          challenges, and cherishing moments with my family.
+          Beyond my professional journey, I’m a husband and father of three. I love playing volleyball, taking on new coding challenges, and spending quality time with my family.
         </p>
       </TextBlock>
       <AboutImage
@@ -67,15 +62,6 @@ const About = () => {
         src="/assets/QChildren.jpg"
         alt="Image of Boyd's children"
       />
-
-      {/* <SectionTitle>Get Connected</SectionTitle>
-      <AboutText>
-        If you'd like to get in touch, feel free to send me an email at:
-        <br />
-        <strong>boydisaacq@gmail.com</strong>
-        <br />
-        I'll get back to you as soon as possible!
-      </AboutText> */}
     </AboutContainer>
   );
 };
