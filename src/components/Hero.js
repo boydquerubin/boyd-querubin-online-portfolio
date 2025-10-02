@@ -97,9 +97,9 @@ const Hero = () => {
       </HeroImageWrapper>
       <HeroTitle>Boyd Querubin</HeroTitle>
       <HeroSubtitle>Software Developer | Digital Marketer</HeroSubtitle>
-      <HeroButton href="/assets/boyd_querubin_11-24.pdf" target="_blank">
+      {/* <HeroButton href="/assets/boyd_querubin_11-24.pdf" target="_blank">
         Download Resume
-      </HeroButton>
+      </HeroButton> */}
       <SocialsTitle>Social Media</SocialsTitle>
       <SocialIconsList>
         <SocialButton

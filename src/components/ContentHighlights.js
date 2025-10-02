@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ReactPlayer from "react-player/youtube";
+import ReactPlayer from "react-player";
 
 const ContentContainer = styled.section`
   padding: 4rem 2rem;
@@ -28,8 +28,8 @@ const SectionDescription = styled.p`
 `;
 
 const CarouselContainer = styled.div`
-  max-width: 1200px; /* Adjust this value to set your desired max width */
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto; /* spacing between carousels */
 `;
 
 const VideoWrapper = styled.div`
@@ -43,7 +43,7 @@ const VideoWrapper = styled.div`
 
 const PlayerWrapper = styled.div`
   position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%; /* 16:9 ratio */
 `;
 
 const StyledReactPlayer = styled(ReactPlayer)`
@@ -67,108 +67,133 @@ const ContactText = styled.p`
 
 const ContentHighlights = () => {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 2,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 2 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   };
 
   return (
     <ContentContainer>
       <SectionTitle>Content Highlights</SectionTitle>
       <SectionDescription>
-        Explore a collection of my video content showcasing my journey in
-        content creation. These works emphasize my passion for storytelling and
-        creative expression, spanning 2D and 3D animation, as well as
-        videography across various platforms.
+        Take a look at my video work that captures my path in content creation.
+        I enjoy blending storytelling with creative expression through 2D and 3D animation,
+        along with videography across different platforms.
       </SectionDescription>
+
+      {/* Main Highlights Carousel (7 videos) */}
       <CarouselContainer>
         <Carousel responsive={responsive}>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=OLrvD-Jz1oQ"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=OLrvD-Jz1oQ" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=Y1TGu4yvEJg&amp;t=6s"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=Y1TGu4yvEJg&t=6s" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=Co3Jlu0ymg0"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=Co3Jlu0ymg0" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=-6f-Q4brhpY"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=-6f-Q4brhpY" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=0ODeIGjOpnA"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=0ODeIGjOpnA" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
           <VideoWrapper>
             <PlayerWrapper>
-              <StyledReactPlayer
-                url="https://www.youtube.com/watch?v=gRBfOb2PHgk"
-                width="100%"
-                height="100%"
-                controls={true}
-              />
+              <StyledReactPlayer url="https://www.youtube.com/watch?v=gRBfOb2PHgk" width="100%" height="100%" controls />
             </PlayerWrapper>
           </VideoWrapper>
         </Carousel>
       </CarouselContainer>
 
+      {/* 3D Animation Reels Carousel */}
+      <SectionTitle>3D Animation Reels</SectionTitle>
+      <CarouselContainer>
+        <Carousel responsive={responsive}>
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/Cj-1nilJPdb/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/CkQ0ytPpjce/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/CoK4q-KLSXd/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/ClZDKeTJ-Eu/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/CjqikoivHjm/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+        </Carousel>
+      </CarouselContainer>
+
+      {/* Instagram Reels Carousel */}
+      <SectionTitle>High Performing Reels</SectionTitle>
+      <CarouselContainer>
+        <Carousel responsive={responsive}>
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/C3bJqZGukqf/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+          
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/C4gju2zuwEo/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/C3_Lrkyymyf/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+          
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/C2kiag-L8g1/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+
+          <VideoWrapper>
+            <PlayerWrapper>
+              <StyledReactPlayer url="https://www.instagram.com/reel/C4q2dhvSdr6/?hl=en" width="100%" height="100%" controls />
+            </PlayerWrapper>
+          </VideoWrapper>
+        </Carousel>
+      </CarouselContainer>
+
+      {/* Contact Section */}
       <SectionTitle>Get Connected</SectionTitle>
       <ContactText>
         If you'd like to get in touch, feel free to send me an email at:
@@ -179,7 +204,6 @@ const ContentHighlights = () => {
         <br />
         I'll get back to you as soon as possible!
       </ContactText>
-
     </ContentContainer>
   );
 };
