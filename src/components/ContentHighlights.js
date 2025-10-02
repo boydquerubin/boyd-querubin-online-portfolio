@@ -33,12 +33,11 @@ const CarouselContainer = styled.div`
 `;
 
 const VideoWrapper = styled.div`
-  padding: 1rem;
-  transition: transform 0.3s ease;
-  &:hover { transform: scale(1.05); }
+  padding: 0.75rem; /* slightly tighter */
+  transition: transform 0.25s ease;
+  &:hover { transform: scale(1.03); }
 `;
 
-/* --- LANDSCAPE player (YouTube, 16:9) --- */
 const PlayerWrapper = styled.div`
   position: relative;
   aspect-ratio: 16 / 9;
@@ -54,7 +53,11 @@ const StyledReactPlayer = styled(ReactPlayer)`
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 `;
 
-/* --- PORTRAIT player (Reels, 9:16) --- */
+const ReelOuter = styled.div`
+  width: clamp(180px, 22vw, 300px); /* min 180px, prefer ~22vw, max 300px */
+  margin: 0 auto;
+`;
+
 const ReelWrapper = styled.div`
   position: relative;
   aspect-ratio: 9 / 16;
@@ -69,12 +72,11 @@ const ReelFrame = styled.iframe`
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 16px;
+  border-radius: 14px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   background: #000;
 `;
 
-/* Converts "https://www.instagram.com/reel/XXXX/?hl=en" to embed URL */
 const toInstagramEmbed = (url) => {
   const match = url.match(/instagram\.com\/reel\/([A-Za-z0-9_\-]+)/i);
   if (!match) return null;
@@ -86,16 +88,18 @@ const ReelEmbed = ({ url, title = "Reel" }) => {
   const embed = toInstagramEmbed(url);
   if (!embed) return null;
   return (
-    <ReelWrapper>
-      <ReelFrame
-        src={embed}
-        title={title}
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="strict-origin-when-cross-origin"
-      />
-    </ReelWrapper>
+    <ReelOuter>
+      <ReelWrapper>
+        <ReelFrame
+          src={embed}
+          title={title}
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
+      </ReelWrapper>
+    </ReelOuter>
   );
 };
 
@@ -111,11 +115,18 @@ const ContactText = styled.p`
 `;
 
 const ContentHighlights = () => {
-  const responsive = {
+  const responsiveYouTube = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
     desktop:           { breakpoint: { max: 3000, min: 1024 }, items: 2 },
     tablet:            { breakpoint: { max: 1024, min: 464 },  items: 2 },
     mobile:            { breakpoint: { max: 464,  min: 0 },    items: 1 },
+  };
+
+  const responsiveReels = {
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 3 },
+    desktop:           { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+    tablet:            { breakpoint: { max: 1024, min: 600 },  items: 2 },
+    mobile:            { breakpoint: { max: 600,  min: 0 },    items: 1 },
   };
 
   const youtubeVideos = [
@@ -129,11 +140,11 @@ const ContentHighlights = () => {
   ];
 
   const reels3D = [
-    "https://www.instagram.com/reel/Cj-1nilJPdb/?hl=en",
     "https://www.instagram.com/reel/CkQ0ytPpjce/?hl=en",
+    "https://www.instagram.com/reel/CjqikoivHjm/?hl=en",
     "https://www.instagram.com/reel/CoK4q-KLSXd/?hl=en",
     "https://www.instagram.com/reel/ClZDKeTJ-Eu/?hl=en",
-    "https://www.instagram.com/reel/CjqikoivHjm/?hl=en",
+    "https://www.instagram.com/reel/Cj-1nilJPdb/?hl=en",
   ];
 
   const reelsFeatured = [
@@ -153,9 +164,8 @@ const ContentHighlights = () => {
         along with videography across different platforms.
       </SectionDescription>
 
-      {/* Main Highlights Carousel (YouTube - landscape) */}
       <CarouselContainer>
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsiveYouTube}>
           {youtubeVideos.map((url) => (
             <VideoWrapper key={url}>
               <PlayerWrapper>
@@ -166,10 +176,9 @@ const ContentHighlights = () => {
         </Carousel>
       </CarouselContainer>
 
-      {/* 3D Animation Reels (portrait) */}
       <SectionTitle>3D Animation Reels</SectionTitle>
       <CarouselContainer>
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsiveReels}>
           {reels3D.map((url) => (
             <VideoWrapper key={url}>
               <ReelEmbed url={url} title="3D Animation Reel" />
@@ -178,10 +187,9 @@ const ContentHighlights = () => {
         </Carousel>
       </CarouselContainer>
 
-      {/* Casual/general reels (portrait) */}
       <SectionTitle>Featured Reels</SectionTitle>
       <CarouselContainer>
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsiveReels}>
           {reelsFeatured.map((url) => (
             <VideoWrapper key={url}>
               <ReelEmbed url={url} title="Featured Reel" />
