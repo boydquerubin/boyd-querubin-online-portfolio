@@ -176,18 +176,7 @@ const ContentHighlights = () => {
         </Carousel>
       </CarouselContainer>
 
-      <SectionTitle>3D Animation Reels</SectionTitle>
-      <CarouselContainer>
-        <Carousel responsive={responsiveReels}>
-          {reels3D.map((url) => (
-            <VideoWrapper key={url}>
-              <ReelEmbed url={url} title="3D Animation Reel" />
-            </VideoWrapper>
-          ))}
-        </Carousel>
-      </CarouselContainer>
-
-      <SectionTitle>Featured Reels</SectionTitle>
+      <SectionTitle>High Performing Reels</SectionTitle>
       <CarouselContainer>
         <Carousel responsive={responsiveReels}>
           {reelsFeatured.map((url) => (
@@ -197,6 +186,17 @@ const ContentHighlights = () => {
           ))}
         </Carousel>
       </CarouselContainer>
+
+      <SectionTitle>3D Animation Reels</SectionTitle>
+      <CarouselContainer>
+        <Carousel responsive={responsiveReels}>
+          {reels3D.map((url) => (
+            <VideoWrapper key={url}>
+              <ReelEmbed url={url} title="3D Animation Reel" />
+            </VideoWrapper>
+          ))}
+        </Carousel>
+      </CarouselContainer>      
 
       <SectionTitle>Connect with me</SectionTitle>
       <ContactText>
