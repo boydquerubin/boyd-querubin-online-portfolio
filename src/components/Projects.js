@@ -155,7 +155,7 @@ const ProjectLink = styled.a`
   padding: 0 1rem;
   background-color: #24313a;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 700;
