@@ -39,18 +39,17 @@ const ProjectList = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background: #f7f8f4;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(46, 58, 69, 0.08);
-  box-shadow: 0 8px 20px rgba(46, 58, 69, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.25s ease;
   display: flex;
   flex-direction: column;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 26px rgba(46, 58, 69, 0.14);
   }
 `;
 
@@ -58,11 +57,12 @@ const ProjectImage = styled.img`
   width: 100%;
   height: 190px;
   object-fit: cover;
-  background: #dfe8d2;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(46, 58, 69, 0.12);
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.35rem;
+  padding: 1.25rem 0.25rem 0;
   display: flex;
   flex-direction: column;
   flex: 1;
