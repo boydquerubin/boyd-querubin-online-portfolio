@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
   padding: 5rem 1.5rem;
-  background: #eef3e6;
+  background: #e4f0d0;
 `;
 
 const SectionHeader = styled.div`
