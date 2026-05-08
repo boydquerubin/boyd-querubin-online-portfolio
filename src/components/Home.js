@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Hero from "./Hero";
+import ProfessionalProjects from "./ProfessionalProjects";
 import Projects from "./Projects";
 
 const HomeContainer = styled.div`
@@ -16,6 +17,10 @@ const HeroSection = styled.section`
   background-color: #f9f9f9;
 `;
 
+const ProfessionalSection = styled.section`
+  width: 100%;
+`;
+
 const ProjectsSection = styled.section`
   width: 100%;
   padding: 2rem 1rem;
@@ -28,6 +33,9 @@ const Home = () => {
       <HeroSection>
         <Hero />
       </HeroSection>
+      <ProfessionalSection>
+        <ProfessionalProjects />
+      </ProfessionalSection>
       <ProjectsSection>
         <Projects />
       </ProjectsSection>

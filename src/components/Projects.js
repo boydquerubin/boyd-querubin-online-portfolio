@@ -63,7 +63,7 @@ const ProjectLink = styled.a`
 const Projects = () => {
   return (
     <ProjectsContainer>
-      <ProjectsTitle>My Projects</ProjectsTitle>
+      <ProjectsTitle>Personal & School Projects</ProjectsTitle>
       <ProjectList>
         <ProjectCard>
           <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
