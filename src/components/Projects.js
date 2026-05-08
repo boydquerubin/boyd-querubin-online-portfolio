@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
   padding: 5rem 1.5rem;
-  background: #f7f8f4;
+  background: #eef3e6;
 `;
 
 const ProjectsTitle = styled.h2`
@@ -24,75 +24,83 @@ const ProjectsSubtitle = styled.p`
 
 const ProjectList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 950px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProjectCard = styled.div`
-  background: #ffffff;
-  border-radius: 18px;
+  background: #f7f8f4;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(46, 58, 69, 0.1);
   border: 1px solid rgba(46, 58, 69, 0.08);
+  box-shadow: 0 8px 20px rgba(46, 58, 69, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(46, 58, 69, 0.16);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(46, 58, 69, 0.14);
   }
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: 210px;
+  height: 190px;
   object-fit: cover;
+  background: #dfe8d2;
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.5rem;
+  padding: 1.35rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 `;
 
 const ProjectTitle = styled.h3`
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: #2e3a45;
   margin: 0 0 0.75rem 0;
   line-height: 1.3;
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 0.96rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 0.94rem;
+  color: #4f5f58;
+  line-height: 1.55;
   margin: 0 0 1rem 0;
 `;
 
 const TechTags = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.5rem 0 1.25rem 0;
+  gap: 0.45rem;
+  margin: 0.25rem 0 1.25rem 0;
 
   span {
-    background: #eef3e6;
+    background: #dfe8d2;
     color: #2e3a45;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 700;
-    padding: 0.35rem 0.7rem;
+    padding: 0.32rem 0.65rem;
     border-radius: 999px;
-    letter-spacing: 0.01em;
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 0.75rem;
+  gap: 0.65rem;
   margin-top: auto;
 
   @media (max-width: 420px) {
@@ -103,12 +111,12 @@ const ButtonGroup = styled.div`
 const ProjectLink = styled.a`
   flex: 1;
   text-align: center;
-  padding: 0.65rem 0.9rem;
+  padding: 0.6rem 0.85rem;
   background-color: #2e3a45;
   color: #fff;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
   transition: background-color 0.25s ease, transform 0.25s ease;
 
