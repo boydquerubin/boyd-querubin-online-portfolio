@@ -143,6 +143,7 @@ const ProfessionalProjects = () => {
             <ContributionList>
               <li>Improved the customer quote flow through a custom retail quote calculator.</li>
               <li>Created website and marketing content for countertop services.</li>
+              <li>Integrated AI capabilities into the company website to improve the customer quote experience.</li>
               <li>Supported social media content and project showcases.</li>
               <li>Connected online traffic to real customer leads and consultations.</li>
             </ContributionList>
