@@ -138,7 +138,7 @@ const TechTags = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 0.65rem;
+  gap: 0.55rem;
   margin-top: auto;
 
   @media (max-width: 420px) {
@@ -148,29 +148,38 @@ const ButtonGroup = styled.div`
 
 const ProjectLink = styled.a`
   flex: 1;
-  text-align: center;
-  padding: 0.62rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 1rem;
   background-color: #24313a;
   color: #ffffff;
-  border-radius: 999px;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 0.82rem;
-  font-weight: 800;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
-    background-color: #3c4d57;
-    transform: translateY(-2px);
+    background-color: #33424c;
+    transform: translateY(-1px);
   }
 `;
 
 const SecondaryLink = styled(ProjectLink)`
-  background-color: #f5f8ef;
+  background-color: #ffffff;
   color: #24313a;
-  border: 1px solid rgba(36, 49, 58, 0.12);
+  border: 1px solid #ccd8bf;
 
   &:hover {
-    background-color: #dfe8d2;
+    background-color: #f4f7ef;
+    border-color: #b9c8aa;
     color: #24313a;
   }
 `;
