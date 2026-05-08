@@ -27,15 +27,15 @@ const AboutImage = styled.img`
   border-radius: 15px;
 `;
 
-const AboutText = styled.p`
-  font-size: 1.25rem;
-  color: #666;
-  margin-top: 1rem;
-  line-height: 1.6;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-`;
+// const AboutText = styled.p`
+//   font-size: 1.25rem;
+//   color: #666;
+//   margin-top: 1rem;
+//   line-height: 1.6;
+//   max-width: 750px;
+//   margin-left: auto;
+//   margin-right: auto;
+// `;
 
 const About = () => {
   return (

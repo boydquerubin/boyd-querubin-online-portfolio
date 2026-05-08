@@ -21,23 +21,23 @@ const HeroSubtitle = styled.p`
   margin-top: 0.5rem;
 `;
 
-const HeroButton = styled.a`
-  margin: 1.5rem;
-  padding: 0.5rem 2rem;
-  background-color: #2e3a45;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// const HeroButton = styled.a`
+//   margin: 1.5rem;
+//   padding: 0.5rem 2rem;
+//   background-color: #2e3a45;
+//   color: #fff;
+//   border-radius: 5px;
+//   text-decoration: none;
+//   font-weight: bold;
+//   display: inline-block;
+//   transition: background-color 0.3s ease, transform 0.3s ease;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &:hover {
-    background-color: #666;
-    transform: scale(1.05);
-  }
-`;
+//   &:hover {
+//     background-color: #666;
+//     transform: scale(1.05);
+//   }
+// `;
 
 const HeroImageWrapper = styled.div`
   display: flex;
