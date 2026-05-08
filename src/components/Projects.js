@@ -129,7 +129,7 @@ const TechTags = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 0.55rem;
+  gap: 0.65rem;
   margin-top: auto;
 
   @media (max-width: 420px) {
@@ -144,34 +144,31 @@ const ProjectLink = styled.a`
   justify-content: center;
   height: 42px;
   padding: 0 1rem;
-  background-color: #24313a;
+  background-color: #2e3a45;
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-size: 0.9rem;
+  font-weight: bold;
   border: 1px solid transparent;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #33424c;
-    transform: translateY(-1px);
+    background-color: #666;
+    transform: translateY(-2px);
   }
 `;
 
 const SecondaryLink = styled(ProjectLink)`
-  background-color: #ffffff;
-  color: #24313a;
-  border: 1px solid #ccd8bf;
+  background-color: #2e3a45;
+  color: #ffffff;
+  opacity: 0.9;
 
   &:hover {
-    background-color: #f4f7ef;
-    border-color: #b9c8aa;
-    color: #24313a;
+    background-color: #666;
+    color: #ffffff;
+    opacity: 1;
   }
 `;
 
@@ -179,7 +176,6 @@ const Projects = () => {
   return (
     <ProjectsContainer>
       <SectionHeader>
-
         <ProjectsTitle>Personal & School Projects</ProjectsTitle>
 
         <ProjectsSubtitle>
