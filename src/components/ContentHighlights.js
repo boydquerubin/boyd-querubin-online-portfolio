@@ -116,8 +116,8 @@ const ContactText = styled.p`
 
 const ContentHighlights = () => {
   const responsiveYouTube = {
-    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
-    desktop:           { breakpoint: { max: 3000, min: 1024 }, items: 2 },
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 3 },
+    desktop:           { breakpoint: { max: 3000, min: 1024 }, items: 3 },
     tablet:            { breakpoint: { max: 1024, min: 464 },  items: 2 },
     mobile:            { breakpoint: { max: 464,  min: 0 },    items: 1 },
   };
@@ -130,13 +130,14 @@ const ContentHighlights = () => {
   };
 
   const youtubeVideos = [
-    "https://www.youtube.com/watch?v=OLrvD-Jz1oQ",
-    "https://www.youtube.com/watch?v=Y1TGu4yvEJg&t=6s",
-    "https://www.youtube.com/watch?v=Co3Jlu0ymg0",
-    "https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s",
     "https://www.youtube.com/watch?v=-6f-Q4brhpY",
+    "https://www.youtube.com/watch?v=DmqZSUroVEs&t=151s",
+    "https://www.youtube.com/watch?v=OLrvD-Jz1oQ",
+    "https://www.youtube.com/watch?v=Co3Jlu0ymg0",
+    "https://www.youtube.com/watch?v=Y1TGu4yvEJg&t=6s",
     "https://www.youtube.com/watch?v=0ODeIGjOpnA",
     "https://www.youtube.com/watch?v=gRBfOb2PHgk",
+    "https://www.youtube.com/watch?v=qOW8cvq2hU0"
   ];
 
   const reels3D = [
