@@ -12,15 +12,6 @@ const SectionHeader = styled.div`
   text-align: center;
 `;
 
-const Eyebrow = styled.p`
-  margin: 0 0 0.65rem 0;
-  color: #5f7059;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-`;
-
 const ProjectsTitle = styled.h2`
   font-size: clamp(2rem, 4vw, 2.75rem);
   color: #24313a;
@@ -188,7 +179,6 @@ const Projects = () => {
   return (
     <ProjectsContainer>
       <SectionHeader>
-        <Eyebrow>Selected Builds</Eyebrow>
 
         <ProjectsTitle>Personal & School Projects</ProjectsTitle>
 
