@@ -39,17 +39,18 @@ const ProjectList = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background: transparent;
-  border-radius: 0;
-  overflow: visible;
-  border: none;
-  box-shadow: none;
-  transition: transform 0.25s ease;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(46, 58, 69, 0.08);
+  box-shadow: 0 8px 22px rgba(46, 58, 69, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
 
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(46, 58, 69, 0.18);
   }
 `;
 
@@ -57,12 +58,13 @@ const ProjectImage = styled.img`
   width: 100%;
   height: 190px;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(46, 58, 69, 0.12);
+  display: block;
+  background: #ffffff;
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.25rem 0.25rem 0;
+  padding: 1.35rem;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -89,7 +91,7 @@ const TechTags = styled.div`
   margin: 0.25rem 0 1.25rem 0;
 
   span {
-    background: #dfe8d2;
+    background: #eef3e6;
     color: #2e3a45;
     font-size: 0.74rem;
     font-weight: 700;
