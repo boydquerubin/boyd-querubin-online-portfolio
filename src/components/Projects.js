@@ -2,35 +2,50 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
-  padding: 5rem 1.5rem;
-  background: #eef3e6;
+  padding: 6rem 1.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.85), transparent 32rem),
+    linear-gradient(180deg, #eef3e6 0%, #f6f8f1 100%);
+`;
+
+const SectionHeader = styled.div`
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+`;
+
+const Eyebrow = styled.p`
+  margin: 0 0 0.75rem 0;
+  color: #63735f;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 `;
 
 const ProjectsTitle = styled.h2`
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  color: #2e3a45;
-  text-align: center;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  color: #24313a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.04em;
 `;
 
 const ProjectsSubtitle = styled.p`
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  text-align: center;
-  color: #5f6b73;
+  margin: 0 auto;
+  color: #58656d;
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.75;
 `;
 
 const ProjectList = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  max-width: 1180px;
   margin: 0 auto;
 
   @media (max-width: 950px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 650px) {
@@ -38,71 +53,113 @@ const ProjectList = styled.div`
   }
 `;
 
-const ProjectCard = styled.div`
-  background: #ffffff;
-  border-radius: 16px;
+const ProjectCard = styled.article`
+  grid-column: span 2;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(36, 49, 58, 0.08);
+  border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(46, 58, 69, 0.08);
-  box-shadow: 0 8px 22px rgba(46, 58, 69, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 18px 45px rgba(36, 49, 58, 0.11);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 32px rgba(46, 58, 69, 0.18);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(36, 49, 58, 0.16);
+    border-color: rgba(36, 49, 58, 0.16);
   }
+
+  &:first-child {
+    grid-column: span 3;
+  }
+
+  &:nth-child(2) {
+    grid-column: span 3;
+  }
+
+  @media (max-width: 950px) {
+    grid-column: span 1;
+
+    &:first-child,
+    &:nth-child(2) {
+      grid-column: span 1;
+    }
+  }
+`;
+
+const ImageFrame = styled.div`
+  padding: 0.85rem 0.85rem 0;
+  background: #ffffff;
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: 190px;
+  height: 210px;
   object-fit: cover;
   display: block;
-  background: #ffffff;
+  border-radius: 18px;
+  background: #edf1e8;
+
+  @media (max-width: 650px) {
+    height: 190px;
+  }
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.35rem;
-  background: #ffffff;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 `;
 
+const ProjectMeta = styled.p`
+  margin: 0 0 0.55rem 0;
+  color: #6f7e6b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;
+
 const ProjectTitle = styled.h3`
-  font-size: 1.25rem;
-  color: #2e3a45;
-  margin: 0 0 0.75rem 0;
-  line-height: 1.3;
+  font-size: 1.28rem;
+  color: #24313a;
+  margin: 0 0 0.8rem 0;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 0.94rem;
-  color: #4f5f58;
-  line-height: 1.55;
-  margin: 0 0 1rem 0;
+  font-size: 0.96rem;
+  color: #526068;
+  line-height: 1.65;
+  margin: 0 0 1.15rem 0;
 `;
 
 const TechTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin: 0.25rem 0 1.25rem 0;
+  margin: 0 0 1.5rem 0;
 
   span {
     background: #eef3e6;
-    color: #2e3a45;
-    font-size: 0.74rem;
-    font-weight: 700;
-    padding: 0.32rem 0.65rem;
+    color: #34453f;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.38rem 0.68rem;
     border-radius: 999px;
+    border: 1px solid rgba(52, 69, 63, 0.08);
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 0.65rem;
+  gap: 0.75rem;
   margin-top: auto;
 
   @media (max-width: 420px) {
@@ -113,36 +170,59 @@ const ButtonGroup = styled.div`
 const ProjectLink = styled.a`
   flex: 1;
   text-align: center;
-  padding: 0.6rem 0.85rem;
-  background-color: #2e3a45;
+  padding: 0.72rem 0.9rem;
+  background-color: #24313a;
   color: #fff;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: bold;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  font-size: 0.86rem;
+  font-weight: 800;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
   &:hover {
-    background-color: #4f5f6d;
+    background-color: #3c4d57;
     transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(36, 49, 58, 0.22);
+  }
+`;
+
+const SecondaryLink = styled(ProjectLink)`
+  background-color: #eef3e6;
+  color: #24313a;
+  border: 1px solid rgba(36, 49, 58, 0.12);
+
+  &:hover {
+    background-color: #dfe8d2;
+    color: #24313a;
   }
 `;
 
 const Projects = () => {
   return (
     <ProjectsContainer>
-      <ProjectsTitle>Personal & School Projects</ProjectsTitle>
+      <SectionHeader>
+        <Eyebrow>Selected Builds</Eyebrow>
 
-      <ProjectsSubtitle>
-        A collection of web development projects built through coursework,
-        personal practice, and hands-on learning.
-      </ProjectsSubtitle>
+        <ProjectsTitle>Personal & School Projects</ProjectsTitle>
+
+        <ProjectsSubtitle>
+          A collection of web development projects built through coursework,
+          personal practice, and hands-on learning, with a focus on responsive
+          layouts, interactive features, and practical user experiences.
+        </ProjectsSubtitle>
+      </SectionHeader>
 
       <ProjectList>
         <ProjectCard>
-          <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
+          <ImageFrame>
+            <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
+          </ImageFrame>
 
           <ProjectContent>
+            <ProjectMeta>Full-Stack Capstone</ProjectMeta>
             <ProjectTitle>Rubyx Qube - Trivia Game App</ProjectTitle>
 
             <ProjectDescription>
@@ -169,21 +249,24 @@ const Projects = () => {
                 Live Site
               </ProjectLink>
 
-              <ProjectLink
+              <SecondaryLink
                 href="https://github.com/boydquerubin/devmountain-react-capstone-trivia-app"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
-              </ProjectLink>
+              </SecondaryLink>
             </ButtonGroup>
           </ProjectContent>
         </ProjectCard>
 
         <ProjectCard>
-          <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
+          <ImageFrame>
+            <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
+          </ImageFrame>
 
           <ProjectContent>
+            <ProjectMeta>React Application</ProjectMeta>
             <ProjectTitle>BudBudget - Savings App</ProjectTitle>
 
             <ProjectDescription>
@@ -210,24 +293,27 @@ const Projects = () => {
                 Live Site
               </ProjectLink>
 
-              <ProjectLink
+              <SecondaryLink
                 href="https://github.com/boydquerubin/devmountain-capstone-project"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
-              </ProjectLink>
+              </SecondaryLink>
             </ButtonGroup>
           </ProjectContent>
         </ProjectCard>
 
         <ProjectCard>
-          <ProjectImage
-            src="/assets/filipino.webp"
-            alt="A Taste of Filipino Home"
-          />
+          <ImageFrame>
+            <ProjectImage
+              src="/assets/filipino.webp"
+              alt="A Taste of Filipino Home"
+            />
+          </ImageFrame>
 
           <ProjectContent>
+            <ProjectMeta>Responsive Website</ProjectMeta>
             <ProjectTitle>A Taste of Filipino Home</ProjectTitle>
 
             <ProjectDescription>
@@ -253,24 +339,27 @@ const Projects = () => {
                 Live Site
               </ProjectLink>
 
-              <ProjectLink
+              <SecondaryLink
                 href="https://github.com/boydquerubin/wdd131/tree/main/project"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
-              </ProjectLink>
+              </SecondaryLink>
             </ButtonGroup>
           </ProjectContent>
         </ProjectCard>
 
         <ProjectCard>
-          <ProjectImage
-            src="/assets/chamber.webp"
-            alt="Meridian Chamber of Commerce"
-          />
+          <ImageFrame>
+            <ProjectImage
+              src="/assets/chamber.webp"
+              alt="Meridian Chamber of Commerce"
+            />
+          </ImageFrame>
 
           <ProjectContent>
+            <ProjectMeta>Data-Driven Layout</ProjectMeta>
             <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
 
             <ProjectDescription>
@@ -297,24 +386,27 @@ const Projects = () => {
                 Live Site
               </ProjectLink>
 
-              <ProjectLink
+              <SecondaryLink
                 href="https://github.com/boydquerubin/wdd231/tree/main/chamber"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
-              </ProjectLink>
+              </SecondaryLink>
             </ButtonGroup>
           </ProjectContent>
         </ProjectCard>
 
         <ProjectCard>
-          <ProjectImage
-            src="/assets/ecommerce.webp"
-            alt="BRIQ-N-BRAQ Ecommerce Store"
-          />
+          <ImageFrame>
+            <ProjectImage
+              src="/assets/ecommerce.webp"
+              alt="BRIQ-N-BRAQ Ecommerce Store"
+            />
+          </ImageFrame>
 
           <ProjectContent>
+            <ProjectMeta>Ecommerce Practice</ProjectMeta>
             <ProjectTitle>Sample Ecommerce Store</ProjectTitle>
 
             <ProjectDescription>
@@ -341,13 +433,13 @@ const Projects = () => {
                 Live Site
               </ProjectLink>
 
-              <ProjectLink
+              <SecondaryLink
                 href="https://github.com/boydquerubin/wdd231/tree/main/project"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
-              </ProjectLink>
+              </SecondaryLink>
             </ButtonGroup>
           </ProjectContent>
         </ProjectCard>
