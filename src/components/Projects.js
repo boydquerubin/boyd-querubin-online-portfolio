@@ -79,11 +79,11 @@ const ProjectImage = styled.img`
   object-fit: cover;
   display: block;
   border-radius: 13px;
-  background: #eef3e6;
+  background: #e4f0d0;
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.25rem;
+  padding: 1.25rem 1.3rem 1.35rem;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -102,31 +102,37 @@ const ProjectMeta = styled.p`
 const ProjectTitle = styled.h3`
   font-size: 1.15rem;
   color: #24313a;
-  margin: 0 0 0.7rem 0;
+  margin: 0 0 0.65rem 0;
   line-height: 1.3;
 `;
 
 const ProjectDescription = styled.p`
   font-size: 0.9rem;
   color: #526068;
-  line-height: 1.55;
-  margin: 0 0 1rem 0;
+  line-height: 1.62;
+  margin: 0 0 1.05rem 0;
 `;
 
 const TechTags = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0 0 1.25rem 0;
+  gap: 0.42rem;
+  margin: 0 0 1.35rem 0;
 
   span {
-    background: #eef3e6;
-    color: #34453f;
-    font-size: 0.68rem;
-    font-weight: 800;
-    padding: 0.3rem 0.58rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.45rem;
+    background: #f5f8ef;
+    color: #42524a;
+    font-size: 0.66rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.25rem 0.55rem;
     border-radius: 999px;
-    border: 1px solid rgba(52, 69, 63, 0.08);
+    border: 1px solid #dce6d3;
+    white-space: nowrap;
   }
 `;
 
@@ -159,7 +165,7 @@ const ProjectLink = styled.a`
 `;
 
 const SecondaryLink = styled(ProjectLink)`
-  background-color: #eef3e6;
+  background-color: #f5f8ef;
   color: #24313a;
   border: 1px solid rgba(36, 49, 58, 0.12);
 
@@ -250,7 +256,7 @@ const Projects = () => {
               <span>React</span>
               <span>JavaScript</span>
               <span>Supabase</span>
-              <span>State Management</span>
+              <span>State</span>
             </TechTags>
 
             <ButtonGroup>
@@ -296,7 +302,7 @@ const Projects = () => {
               <span>HTML</span>
               <span>JavaScript</span>
               <span>CSS</span>
-              <span>Responsive Design</span>
+              <span>Responsive</span>
             </TechTags>
 
             <ButtonGroup>
@@ -390,7 +396,7 @@ const Projects = () => {
               <span>JavaScript</span>
               <span>CSS</span>
               <span>LocalStorage</span>
-              <span>Responsive Design</span>
+              <span>Responsive</span>
             </TechTags>
 
             <ButtonGroup>
