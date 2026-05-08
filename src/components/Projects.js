@@ -163,12 +163,10 @@ const ProjectLink = styled.a`
 const SecondaryLink = styled(ProjectLink)`
   background-color: #2e3a45;
   color: #ffffff;
-  opacity: 0.9;
 
   &:hover {
     background-color: #666;
     color: #ffffff;
-    opacity: 1;
   }
 `;
 
