@@ -96,7 +96,7 @@ const Hero = () => {
         <HeroImage src="/assets/linkedin.jpg" alt="Boyd Querubin" />
       </HeroImageWrapper>
       <HeroTitle>Boyd Querubin</HeroTitle>
-      <HeroSubtitle>Web Developer | Digital Marketer</HeroSubtitle>
+      <HeroSubtitle>Web Developer & Digital Content Creator helping businesses build better websites, stronger brands, and content that converts.</HeroSubtitle>
       {/* <HeroButton href="/assets/boyd_querubin_11-24.pdf" target="_blank">
         Download Resume
       </HeroButton> */}

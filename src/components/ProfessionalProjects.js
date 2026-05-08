@@ -134,7 +134,7 @@ const ProfessionalProjects = () => {
             <ProjectEyebrow>Website • Marketing • Lead Generation</ProjectEyebrow>
             <ProjectTitle>Phoenix Stoneworks Website & Quote Calculator</ProjectTitle>
             <ProjectText>
-              I managed web and digital marketing support for Phoenix Stoneworks, a countertop fabrication and installation company serving the Treasure Valley. My work included website updates, landing page strategy, project showcase content, social media support, and calculator-style tools that made it easier for customers to request quotes.
+              I built the company website and managed and digital marketing support for Phoenix Stoneworks, a countertop fabrication and installation company serving the Treasure Valley. My work included website updates, landing page strategy, project showcase content, social media support, and calculator-style tools that made it easier for customers to request quotes.
             </ProjectText>
             <ContributionList>
               <li>Improved the customer quote flow through a custom retail quote calculator.</li>
@@ -156,8 +156,7 @@ const ProfessionalProjects = () => {
           <VisualPanel>
             <VisualTitle>Phoenix Stoneworks</VisualTitle>
             <VisualText>
-              A professional project combining web development, marketing strategy,
-              customer experience, and practical business growth.
+              A professional business website and digital marketing project for a countertop fabrication and installation company serving the Treasure Valley. My work included website updates, landing page strategy, project showcase content, social media support, and quote-request tools that helped improve the customer experience.
             </VisualText>
           </VisualPanel>
         </ProjectCard>

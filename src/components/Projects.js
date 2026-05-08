@@ -60,6 +60,22 @@ const ProjectLink = styled.a`
   }
 `;
 
+const TechTags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+
+  span {
+    background: #e9ecef;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+  }
+`;
+
 const Projects = () => {
   return (
     <ProjectsContainer>
@@ -68,6 +84,18 @@ const Projects = () => {
         <ProjectCard>
           <ProjectImage src="/assets/rubyxqube.webp" alt="Rubyx Qube" />
           <ProjectTitle>Rubyx Qube - Trivia Game App</ProjectTitle>
+
+          <ProjectDescription>
+            An interactive trivia web application where users can create an account, answer timed questions, and track high scores. This project helped me practice React, user authentication, database interactions, game logic, and building a more engaging front-end experience.
+          </ProjectDescription>
+
+          <TechTags>
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>Supabase</span>
+            <span>CSS</span>
+          </TechTags>
+
           <ProjectLink href="https://rubyxqube.com/" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -81,6 +109,18 @@ const Projects = () => {
         <ProjectCard>
           <ProjectImage src="/assets/budbudget.webp" alt="BudBudget" />
           <ProjectTitle>BudBudget - Savings App</ProjectTitle>
+
+          <ProjectDescription>
+            A budgeting web application designed to help users organize income, expenses, and savings goals in a simple, user-friendly interface. This project focused on form handling, state management, reusable components, and presenting financial information clearly.
+          </ProjectDescription>
+
+          <TechTags>
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>Supabase</span>
+            <span>State Management</span>
+          </TechTags>
+
           <ProjectLink href="https://budbudget.netlify.app/" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -94,6 +134,18 @@ const Projects = () => {
         <ProjectCard>
           <ProjectImage src="/assets/filipino.webp" alt="A Taste of Filipino Home" />
           <ProjectTitle>A Taste of Filipino Home</ProjectTitle>
+
+          <ProjectDescription>
+            A responsive website celebrating Filipino cuisine through featured dishes, cultural storytelling, and clean visual design. This project allowed me to combine web development with personal storytelling, layout design, and mobile-friendly styling.
+          </ProjectDescription>
+
+          <TechTags>
+            <span>HTML</span>
+            <span>JavaScript</span>
+            <span>CSS</span>
+            <span>Responsive Design</span>
+          </TechTags>
+
           <ProjectLink href="https://boydquerubin.github.io/wdd131/project/index.html" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -107,6 +159,18 @@ const Projects = () => {
         <ProjectCard>
           <ProjectImage src="/assets/chamber.webp" alt="Meridian Chamber of Commerce" />
           <ProjectTitle>Meridian Chamber of Commerce</ProjectTitle>
+
+          <ProjectDescription>
+            A chamber of commerce website project built to showcase local businesses, community information, and responsive page layouts. This project helped me practice working with JSON data, responsive design, CSS Grid, navigation structure, and dynamic content rendering.
+          </ProjectDescription>
+
+          <TechTags>
+            <span>HTML</span>
+            <span>CSS Grid</span>
+            <span>JavaScript</span>
+            <span>JSON</span>
+          </TechTags>
+      
           <ProjectLink href="https://boydquerubin.github.io/wdd231/chamber/index.html" target="_blank">
             Deployed Site
           </ProjectLink>
@@ -120,6 +184,18 @@ const Projects = () => {
         <ProjectCard>
           <ProjectImage src="/assets/ecommerce.webp" alt="BRIQ-N-BRAQ Ecommerce Store" />
           <ProjectTitle>Sample Ecommerce Store</ProjectTitle>
+
+          <ProjectDescription>
+            A sample online store built to demonstrate product browsing, shopping cart interactions, and a clean customer-facing layout. This project focused on JavaScript functionality, localStorage, reusable page structure, and creating a simple eCommerce experience.
+          </ProjectDescription>
+
+          <TechTags>
+            <span>JavaScript</span>
+            <span>CSS</span>
+            <span>LocalStorage</span>
+            <span>Responsive Design</span>
+          </TechTags>
+
           <ProjectLink href="https://boydquerubin.github.io/wdd231/project/index.html" target="_blank">
             Deployed Site
           </ProjectLink>

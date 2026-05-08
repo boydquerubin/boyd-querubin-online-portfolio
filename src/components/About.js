@@ -43,13 +43,13 @@ const About = () => {
       <SectionTitle>My Story</SectionTitle>
       <TextBlock>
         <p>
-          I started out with a Bachelor’s Degree in Communications and, since 2020, have worked as a marketer and content creator. Along the way, I discovered a passion for software development and began focusing on building web applications. I enjoy working with modern tools like React and Python.
+          I’m a web developer and digital content creator with experience in marketing, multimedia production, and brand-focused web design. My work combines technical development with creative strategy, allowing me to build websites, digital tools, and content that support both user experience and business goals.
+        </p>
+        <p>          
+          I have experience with JavaScript, React, HTML, CSS, video production, social media content, 3D animation, and digital marketing. Whether I’m developing a web application, improving a company website, or creating visual content, I focus on clear communication, thoughtful design, and practical results. 
         </p>
         <p>
-          Through my online portfolio, I showcase projects that highlight both my technical skills and creative experience.
-        </p>
-        <p>
-          Beyond my professional journey, I’m a husband and father of three. I love playing volleyball, taking on new coding challenges, and spending quality time with my family.
+          Outside of work, I’m a husband and father, and my family is a big part of what motivates me to keep learning, growing, and building a meaningful career. I’m passionate about using technology and creativity together to help businesses strengthen their online presence, connect with their audience, and create meaningful digital experiences.
         </p>
       </TextBlock>
       <AboutImage

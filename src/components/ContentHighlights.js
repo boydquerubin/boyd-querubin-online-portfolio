@@ -160,11 +160,10 @@ const ContentHighlights = () => {
     <ContentContainer>
       <SectionTitle>Content Highlights</SectionTitle>
       <SectionDescription>
-        Take a look at my video work that captures my path in content creation.
-        I enjoy blending storytelling with creative expression through 2D and 3D animation,
-        along with videography across different platforms.
+        A collection of video, social, and animation work showing my experience with storytelling, editing, platform-specific content, and visual communication.
       </SectionDescription>
 
+      <SectionTitle>Tutorial / Educational Video</SectionTitle>
       <CarouselContainer>
         <Carousel responsive={responsiveYouTube}>
           {youtubeVideos.map((url) => (
@@ -177,7 +176,7 @@ const ContentHighlights = () => {
         </Carousel>
       </CarouselContainer>
 
-      <SectionTitle>High Performing Reels</SectionTitle>
+      <SectionTitle>High Performing Social Reels</SectionTitle>
       <CarouselContainer>
         <Carousel responsive={responsiveReels}>
           {reelsFeatured.map((url) => (
