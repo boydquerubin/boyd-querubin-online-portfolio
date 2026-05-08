@@ -78,7 +78,7 @@ const ReelFrame = styled.iframe`
 `;
 
 const toInstagramEmbed = (url) => {
-  const match = url.match(/instagram\.com\/reel\/([A-Za-z0-9_\-]+)/i);
+  const match = url.match(/instagram\.com\/reel\/([A-Za-z0-9_-]+)/i);
   if (!match) return null;
   const id = match[1];
   return `https://www.instagram.com/reel/${id}/embed`;
