@@ -8,12 +8,12 @@ const projects = [
     id: "rubyx-qube",
     emoji: "🎮",
     category: "Full-Stack Capstone",
-    title: "Rubyx Qube — Trivia Game App",
+    title: "Rubyx Qube Trivia App",
     description:
       "An interactive trivia web application where users can create an account, answer timed questions, and track high scores. Built to practice React, user authentication, Supabase database interactions, and game logic.",
     tags: ["React", "JavaScript", "Supabase", "CSS"],
     gradient: "linear-gradient(135deg, #1d4ed8, #7c3aed)",
-    live: "https://rubyxqube.com/",
+    live: "https://rubyx-qube-trivia.vercel.app/",
     github:
       "https://github.com/boydquerubin/devmountain-react-capstone-trivia-app",
   },
